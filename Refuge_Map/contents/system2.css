@@ -4,10 +4,10 @@ body {
   	font-size: 13px;
   	text-transform: uppercase;
   	text-align: center;
-	background-color:#a4b9d0;
-	/*background-color:#dbdbdb;
-	height:100%;
-	width:90%;*/
+    background-color:#a4b9d0;
+    /*background-color:#dbdbdb;
+    height:100%;
+    width:90%;*/
 }
 
 h1 {
@@ -21,8 +21,8 @@ h1 {
     -moz-box-shadow: 0 0 70px #fff;
     box-shadow: 0 0 70px #fff;
     background-color:#ccc;
-/*border:10px #000000 solid;*/
-width: 1080px;
+  /*border:10px #000000 solid;*/
+  width: 1080px;
 
     margin-top: 0;
     /*width: 80%;
@@ -47,7 +47,6 @@ width: 1080px;
 
 a {
   text-decoration: none;
-  color: #fff;
   display: block;
 }
 
@@ -185,7 +184,7 @@ ul.primary li:hover > a{
   ul.primary li:hover ul {
     display: block;
     background: #272727;
-    color: #fff;
+    /*color: #fff;*/
   }
   
   ul.sub {
@@ -209,10 +208,10 @@ ul.primary li:hover > a{
 
 div#leftmenu {
 	width:20%;
-	height:auto;			/*•‚Ìw’è*/
-	margin:10px 10px 10px 25px;	/*ˆÊ’u’²®iIE6‚ÌƒoƒO‚É’ˆÓj*/
-	display:inline;			/*IE6‚Ìƒ}[ƒWƒ“Zo‚ÌƒoƒO‘Îô*/
-	float:left;			/*ƒTƒuƒƒjƒ…[‚ÌƒJƒ‰ƒ€‚ğ¶Šñ‚¹‚É‚·‚é*/
+	height:auto;			/*ï¿½ï¿½ï¿½Ìwï¿½ï¿½*/
+	margin:10px 10px 10px 25px;	/*ï¿½Ê’uï¿½ï¿½ï¿½ï¿½ï¿½iIE6ï¿½Ìƒoï¿½Oï¿½É’ï¿½ï¿½Ój*/
+	display:inline;			/*IE6ï¿½Ìƒ}ï¿½[ï¿½Wï¿½ï¿½ï¿½Zï¿½oï¿½Ìƒoï¿½Oï¿½Îï¿½*/
+	float:left;			/*ï¿½Tï¿½uï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½ÌƒJï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ñ‚¹‚É‚ï¿½ï¿½ï¿½*/
 	color:#000000;
 	padding: 0.5em 1em;
 	margin: 2em 0;
@@ -231,7 +230,7 @@ div#leftmenu {
 
 p{
 font-size:20px;
-font-family:"HG³²‘‘Ì-PRO";
+font-family:"HGï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-PRO";
 }
 .serch{
 	width:400;
@@ -371,15 +370,15 @@ a:link{color:#000000;}
 
 table.sample {
    border-collapse: collapse;
-   border: 3px solid #272727; /* ŠO‘¤‚Ì˜gü */
+   border: 3px solid #272727; /* ï¿½Oï¿½ï¿½ï¿½Ì˜gï¿½ï¿½ */
 }
 
 table.sample td {
    border-collapse: collapse;
-   /*border-width: 1px 0px; /* ã‰º‚¾‚¯ˆø‚­ */
-   border-color: #272727;   /* üFF—Î */
-   border-style: solid;   /* üíFÀü */
-   padding:10px;        /* ƒZƒ‹“à‘¤‚Ì—]”’ */
+   /*border-width: 1px 0px; /* ï¿½ã‰ºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
+   border-color: #272727;   /* ï¿½ï¿½ï¿½Fï¿½Fï¿½ï¿½ */
+   border-style: solid;   /* ï¿½ï¿½ï¿½ï¿½Fï¿½ï¿½ï¿½ï¿½ */
+   padding:10px;        /* ï¿½Zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì—]ï¿½ï¿½ */
 }
 
 
@@ -449,7 +448,7 @@ position: relative;
 
 .ul_open_h{
     background-color: gray;
-    color: #fff;
+    /*color: #fff;*/
     margin: 0;
     padding: 0;
     list-style: none;
@@ -464,9 +463,6 @@ position: relative;
 .ul_open_h li{
     padding: 10px;
     width: 150px;
-}
-a {
-    color: #fff;
 }
 a:hover {
     color: #333;

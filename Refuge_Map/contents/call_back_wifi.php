@@ -74,13 +74,14 @@
 				}
 			}else{
 
-				for($i = 0; $i < count($x); $i++) {
+				/*for($i = 0; $i < count($x); $i++) {
 					if($i == count($x) - 1) {
 						echo $x[$i];
 					}else {
 						echo $x[$i]."<br>";
 					}
-				}
+				}*/
+				return $x;
 			}
 			$x = null;
 			$sql = null;
@@ -286,7 +287,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- CSS　読み込み -->
 		<link rel="stylesheet"href="meanmenu.css" media="(min-width: 0px) and (max-width: 559px)">
-		<link rel="stylesheet"href="system2.css" media="all">
+		<!--<link rel="stylesheet"href="system2.css" media="all">-->
+		<link rel="stylesheet"href="call_back_tunami.css" media="all">
 	</head>
 	<body>
 		<?php  
@@ -439,10 +441,8 @@
 						<option value="DRIVING"<?php echo $select_array[0];?>>車</option>
 					</select>
 				</div>
-
-
+			
 				<div id="map"></div>
-
 
 				<div id="floating-panel4">
 					<b>出力数 : </b>
@@ -452,9 +452,8 @@
 					</select>
 				</div>
 
-				<input type="submit" value="設定を送信" id="button_p">
+				<input type="submit" value="設定を送信" id="button_p" name="button_p">
 			</form>
-
 
 			<table border="1" class="table1" align="center">
 				<tr>
@@ -465,36 +464,28 @@
 					<th scope="col">ルート案内</th>
 				</tr>
 
-				<td class="gyokan">
-					<?php
-						for($i = 0; $i < count($result_1); $i++) {
-							echo $name_array[$i];
-							echo "<br>";
-						}
-					?>
-				</td>
-
-				<td class="gyokan">
-					<?php
-						$sample->result($result_1,"type")
-					?>
-				</td>
-
-				<td class="gyokan">
-					<div id="output"></div>
-				</td>
-
-				<td class="gyokan">
-					<div id="output2"></div>
-				</td>
-
-				<td id="sample">
-					<?php
-						for($i = 0; $i < count($result_1); $i++) {
-							echo "<input type='button' value='案内を表示' style='WIDTH: 200px; HEIGHT: 30px' onclick='kakunin(".($i + 1).");'><br/>";
-						}
-					?>
-				</td>
+				<?php
+					$type_array = $sample->result($result_1,"type");
+					$table_p = "";
+					for($i = 0; $i < count($result_1); $i++) {
+						$table_p .= "<tr>
+										<td>"
+											.$name_array[$i].
+										"</td>
+										<td>"
+											.$type_array[$i].
+										"</td>
+										<td id='distance". $i ."' width='80'>
+										</td>
+										<td id='time". $i ."' width='80'>
+										</td>
+										<td>
+											<input type='button' value='案内を表示' onclick='kakunin(".($i + 1).");'><br/>
+										</td>
+									</tr>";
+					}
+					echo $table_p;
+				?>
 			</table>
 
 			<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -574,8 +565,8 @@
 
 					var selectedMode = document.getElementById('mode').value;
 					service.getDistanceMatrix({
-						origins: [origin1],//ここ
-						destinations: [<?php echo $map_print2;?>],//ここ
+						origins: [origin1],
+						destinations: [<?php echo $map_print2;?>],
 						travelMode: '<?php echo $mode;?>',
 						unitSystem: google.maps.UnitSystem.METRIC,
 						avoidHighways: false,
@@ -586,9 +577,6 @@
 						} else {
 							var originList = response.originAddresses;
 							var destinationList = response.destinationAddresses;
-							var outputDiv = document.getElementById('output');
-							var outputDiv2 = document.getElementById('output2');
-							outputDiv.innerHTML = '';
 							deleteMarkers(markersArray);
 
 							var showGeocodedAddressOnMap = function(asDestination) {
@@ -614,8 +602,9 @@
 								for (var j = 0; j < results.length; j++) {
 									geocoder.geocode({'address': destinationList[j]},
 										showGeocodedAddressOnMap(true));
-									outputDiv.innerHTML += '<b>' + results[j].distance.text + '</b><br>';
-									outputDiv2.innerHTML += '<b>' + results[j].duration.text + '</b><br>';
+									
+									document.getElementById('distance' + j).innerHTML = '<b>' + results[j].distance.text + '</b>';
+									document.getElementById('time' + j).innerHTML = '<b>' + results[j].duration.text + '</b>';
 								}
 							}
 						}

@@ -338,7 +338,7 @@ ul.primary li:hover > a{
   .table1{
     float:right;
     text-align:center;
-    margin-right:270px;
+    margin-right:500px;
   }
 
   .table1 #nuv_button{
@@ -435,12 +435,6 @@ font-family:"HG?3?2?‘‘I-PRO";
 a{color:#000;}
 a:link{color:#000;}
 a:visited {color:#000;}
-
-
-      /* Optional: Makes the sample page fill the window. */
-.gyokan{
-  line-height: 190%;
-}
 
 #output, #output2{
   text-align: right;

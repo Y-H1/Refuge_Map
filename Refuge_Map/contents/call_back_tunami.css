@@ -227,7 +227,7 @@ ul.primary li:hover > a{
     font-family: 'Roboto','sans-serif';
   }
 
-  #floating-panel {
+  div#floating-panel {
     position: absolute;
     top:500px;
     left: 12%;
@@ -241,7 +241,7 @@ ul.primary li:hover > a{
     line-height: 30px;      
   }
 
-  #floating-panel4 {
+  div#floating-panel4 {
     position: absolute;
     top:540px;
     left: 12%;
@@ -293,16 +293,6 @@ ul.primary li:hover > a{
     background-color:#4682B4;
   }
 
-  #map {
-    /*height: 60%;
-      width: 60%;*/
-    height:400px;
-    width:50%;
-    float:left;
-    margin: 0px 10px 0px 30px;
-    border: 1px solid;
-  }
-
   .d_h1{
     padding-right:200px;
   }
@@ -312,37 +302,33 @@ ul.primary li:hover > a{
   }
 
   .option2{
+    float:left;
     position: absolute;
     top:300px;
     right: 194px;
-    z-index: 5;
-    font-family: 'Roboto','sans-serif';
+    left: 10px;
+    /*z-index: 5;*/
+    /*font-family: 'Roboto','sans-serif';
+    border: 10px solid;*/
   }
-
-
-.table1{
-    float:right;
-    text-align:center;
-    margin-left: 15%;
-    margin-right: 25%;
-  }
-
-.table1 #nuv_button{
-    width: 200px;
-    height: 30px;
-  }
-
+  
   #floating-panel {
     position: absolute;
     top:370px;
-    right: 138px;
+    /*right: 138px;*/
+    left: 200px;
     z-index: 5;
     background-color: #fff;
     padding: 5px 42px;
     border: 1px solid #999;
     text-align: center;
     font-family: 'Roboto','sans-serif';
-    line-height: 30px;      
+    line-height: 30px;
+    /*text-align: left;
+    background-color: #fff;
+    border: 1px solid #999;
+    /*font-family: 'Roboto','sans-serif';
+    line-height: 30px;*/      
   }
 
   #floating-panel4 {
@@ -358,6 +344,32 @@ ul.primary li:hover > a{
     line-height: 30px;
   }
 
+
+  #map {
+    /*height: 60%;
+      width: 60%;*/
+    height:400px;
+    width:50%;
+    float:left;
+    margin: 10px 10px 10px 300px;
+    padding-left: 30%; 
+    border: 1px solid;
+  }
+
+
+  .table1{
+    float:right;
+    text-align:center;
+    margin-left: 15%;
+    margin-right: 25%;
+  }
+
+  .table1 #nuv_button{
+    width: 200px;
+    height: 30px;
+  }
+
+  
   #button_p{
     width: 200px;
     height: 40px;
